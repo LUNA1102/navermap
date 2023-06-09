@@ -10,19 +10,20 @@
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript"
         src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=06k6iolq80"></script>
-    <!-- <script src="app.js"></script> -->
 </head>
 
 <body>
     <div id="map"></div>
-    <!-- <div id="map" style="width:100%;height:400px;"></div> -->
     <script>
-        var mapOptions = {
+        var map = new naver.maps.Map('map', {
             center: new naver.maps.LatLng(35.945185, 126.682834),
-            zoom: 10
-        };
+            zoom: 17
+        });
 
-        var map = new naver.maps.Map('map', mapOptions);
+        var marker = new naver.maps.Marker({
+            position: new naver.maps.LatLng(35.945185, 126.682834),
+            map: map
+        });
     </script>
 </body>
 
